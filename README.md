@@ -8,8 +8,8 @@ Not ready yet for distribution, but will be available via [npm](http://www.npmjs
 
 ## Contributors
 
-Jesse Mullan (@jmullan)
-Paul Armstrong (@paularmstrong)
+* Jesse Mullan ([jmullan](https://github.com/jmullan))
+* Paul Armstrong ([paularmstrong](http://github.com/paularmstrong))
 
 ## Running Tests and JSLint
 
