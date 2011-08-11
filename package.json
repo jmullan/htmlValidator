@@ -1,0 +1,25 @@
+{
+    "name": "validator",
+    "version": "0.1.0",
+    "description": "An HTML5 validator for node.js",
+    "keywords": ["html5", "html", "validator"],
+    "repository": "",
+    "contributors": [
+        "Paul Armstrong <paul@paularmstrongdesigns.com> http://paularmstrongdesigns.com",
+        "Jesse Mullan <jmullan@gmail.com> http://fineinternets.com"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "nodelint": "0.4.0",
+        "nodeunit": "0.5.3"
+    },
+    "main": "index",
+    "engines": {
+        "node": ">= 0.4.1"
+    },
+    "scripts": {
+        "all": "make",
+        "lint": "make lint",
+        "test": "make test"
+    }
+}
