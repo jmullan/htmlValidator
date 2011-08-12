@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="">
+  <!-- ##################################################################### -->
+  <!-- ##################################################################### -->
+  <define name="scripting.attr.form.select">
+    <a:documentation> RELAX NG Schema for HTML 5: Web Forms 1.0 Scripting               #</a:documentation>
+    <attribute name="onselect">
+      <data type="string"/>
+    </attribute>
+  </define>
+  <define name="scripting.attr.form.change">
+    <attribute name="onchange">
+      <data type="string"/>
+    </attribute>
+  </define>
+  <!--
+    	input.text.attrs &=
+    		(	scripting.attr.form.select?
+    		)
+  -->
+  <!--
+    	shared-form.attrs &=
+    		(	scripting.attr.form.change?
+    		)
+  -->
+  <!--
+    	form.attrs &=
+    		(	scripting.attr.form.reset?
+    		&	scripting.attr.form.submit?
+    		)
+  -->
+  <define name="scripting.attr.form.submit">
+    <attribute name="onsubmit">
+      <data type="string"/>
+    </attribute>
+  </define>
+  <define name="scripting.attr.form.reset">
+    <attribute name="onreset">
+      <data type="string"/>
+    </attribute>
+  </define>
+</grammar>
