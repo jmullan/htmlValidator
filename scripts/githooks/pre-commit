@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function failCommit() {
     echo "\033[31m----------------------------------------\033[0m"
