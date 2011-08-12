@@ -4,7 +4,7 @@ var util = require('util'),
     child_process = require('child_process'),
     configFile = __dirname + '/config-lint',
     ignore = '',
-    config, root, i;
+    config, root, i, l;
 
 process.argv.forEach(function (val, index, array) {
     if (index < 2) {
@@ -26,8 +26,8 @@ function runLint(error, stdout, stderr) {
     });
 }
 
-i = config.pathIgnore.length;
-while (i--) {
+l = config.pathIgnore.length;
+for (i = 0; i < l; i += 1) {
     ignore += ' ! -path "' + config.pathIgnore[i] + '"';
 }
 

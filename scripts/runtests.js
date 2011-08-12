@@ -5,7 +5,7 @@ var util = require('util'),
     nodeunit = require('nodeunit'),
     configFile = __dirname + '/config-test',
     ignore = '',
-    config, test_runner, i;
+    config, test_runner, i, l;
 
 process.argv.forEach(function (val, index, array) {
     if (index < 2) {
@@ -27,8 +27,8 @@ function runTests(error, stdout, stderr) {
     }
 }
 
-i = config.pathIgnore.length;
-while (i--) {
+l = config.pathIgnore.length;
+for (i = 0; i < l; i += 1) {
     ignore += ' ! -path "' + config.pathIgnore[i] + '"';
 }
 
