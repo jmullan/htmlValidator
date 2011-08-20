@@ -8,7 +8,9 @@
         "Paul Armstrong <paul@paularmstrongdesigns.com> http://paularmstrongdesigns.com",
         "Jesse Mullan <jmullan@gmail.com> http://fineinternets.com"
     ],
-    "dependencies": {},
+    "dependencies": {
+        "underscore": "1.1.7"
+    },
     "devDependencies": {
         "nodelint": "0.4.0",
         "nodeunit": "0.5.3"
