@@ -9,7 +9,8 @@
         "Jesse Mullan <jmullan@gmail.com> http://fineinternets.com"
     ],
     "dependencies": {
-        "underscore": "1.1.7"
+        "underscore": "1.1.7",
+        "mime": "1.2.2"
     },
     "devDependencies": {
         "nodelint": "0.4.0",
