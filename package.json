@@ -1,6 +1,6 @@
 {
     "name": "htmlValidator",
-    "version": "0.1.0",
+    "version": "0.0.1",
     "description": "An HTML5 validator for node.js",
     "keywords": ["html5", "html", "validator"],
     "repository": "git://github.com/jmullan/htmlValidator.git",
@@ -21,8 +21,7 @@
         "node": ">= 0.4.1"
     },
     "scripts": {
-        "all": "make",
-        "lint": "make lint",
-        "test": "make test"
+        "prepublish": "npm prune",
+        "test": "make lint && make test"
     }
 }
