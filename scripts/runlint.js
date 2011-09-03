@@ -23,6 +23,9 @@ function runLint(error, stdout, stderr) {
 
     child_process.exec('node ' + __dirname + '/../node_modules/nodelint/nodelint ' + files + ' --config ' + configFile + '.js', { cwd: config.root }, function (error, stdout, stderr) {
         util.puts(stderr);
+        if (!(/^0 errors/).test(stderr)) {
+            process.exit(1);
+        }
     });
 }
 

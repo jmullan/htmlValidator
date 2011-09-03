@@ -20,7 +20,7 @@ var options = {
     indent: 4,
     laxbreak: true,
     maxerr: 300,
-    maxlen: 600,
+    maxlen: 1000,
     nomen: false,
     newcap: false,
     node: true, // jslint.com has an option for node, but the node module is not up to date yet
