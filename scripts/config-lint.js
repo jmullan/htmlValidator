@@ -1,6 +1,6 @@
 module.exports = {
     root: __dirname + '/../',
-    pathIgnore: ['*node_modules*']
+    pathIgnore: ['*node_modules*', '*HTMLToken*']
 };
 
 // A lot of these parameters are backwards from the official docs. npm's Nodelint is quite out of date.
