@@ -1,10 +1,10 @@
-require.paths.unshift(__dirname + '/../node_modules/');
-
 var util = require('util'),
     child_process = require('child_process'),
     configFile = __dirname + '/config-lint',
     ignore = '',
-    config, root, i, l;
+    config,
+    root,
+    i;
 
 process.argv.forEach(function (val, index, array) {
     if (index < 2) {
@@ -23,14 +23,12 @@ function runLint(error, stdout, stderr) {
 
     child_process.exec('node ' + __dirname + '/../node_modules/nodelint/nodelint ' + files + ' --config ' + configFile + '.js', { cwd: config.root }, function (error, stdout, stderr) {
         util.puts(stderr);
-        if (!(/^0 errors/).test(stderr)) {
-            process.exit(1);
-        }
     });
 }
 
-l = config.pathIgnore.length;
-for (i = 0; i < l; i += 1) {
+i = config.pathIgnore.length;
+while (i) {
+    i -= 1;
     ignore += ' ! -path "' + config.pathIgnore[i] + '"';
 }
 
