@@ -1,5 +1,3 @@
-require.paths.unshift(__dirname + '/../node_modules/');
-
 var util = require('util'),
     child_process = require('child_process'),
     nodeunit = require('nodeunit'),
@@ -10,7 +8,9 @@ var util = require('util'),
     track = require(__dirname + '/../node_modules/nodeunit/lib/track'),
     utils = require(__dirname + '/../node_modules/nodeunit/lib/utils'),
     AssertionError = require(__dirname + '/../node_modules/nodeunit/lib/assert').AssertionError,
-    config, i, l;
+    config,
+    i,
+    l;
 
 process.argv.forEach(function (val, index, array) {
     if (index < 2) {
@@ -80,17 +80,13 @@ function run(files, options) {
 
             if (!assertions.failures()) {
                 console.log('✔ ' + name);
-            }
-            else {
+            } else {
                 console.log(error('✖ ' + name) + '\n');
                 assertions.forEach(function (a) {
                     if (a.failed()) {
                         a = utils.betterErrors(a);
                         if (a.error instanceof AssertionError && a.message) {
-                            console.log(
-                                'Assertion Message: ' +
-                                assertion_message(a.message)
-                            );
+                            console.log('Assertion Message: ' + assertion_message(a.message));
                         }
                         console.log(a.error.stack + '\n');
                     }
@@ -101,18 +97,10 @@ function run(files, options) {
             end = end || new Date().getTime();
             var duration = end - start;
             if (assertions.failures()) {
-                console.log(
-                    '\n' + bold(error('FAILURES: ')) + assertions.failures() +
-                    '/' + assertions.length + ' assertions failed (' +
-                    assertions.duration + 'ms)'
-                );
+                console.log('\n' + bold(error('FAILURES: ')) + assertions.failures() + '/' + assertions.length + ' assertions failed (' + assertions.duration + 'ms)');
                 process.exit(1);
-            }
-            else {
-                console.log(
-                   '\n' + bold(ok('OK: ')) + assertions.length +
-                   ' assertions (' + assertions.duration + 'ms)'
-                );
+            } else {
+                console.log('\n' + bold(ok('OK: ')) + assertions.length + ' assertions (' + assertions.duration + 'ms)');
             }
         },
         testStart: function (name) {
