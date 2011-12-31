@@ -13,8 +13,8 @@
         "mime": "1.2.2"
     },
     "devDependencies": {
-        "nodelint": "0.5.2",
-        "nodeunit": "0.6.4"
+        "nodelint": ">= 0.5.2",
+        "nodeunit": ">= 0.6.4"
     },
     "main": "index",
     "engines": {
