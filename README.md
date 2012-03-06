@@ -1,6 +1,5 @@
 # HTMLValidator  [![Build Status](https://secure.travis-ci.org/Watermelon-Sauce/htmlValidator.png)](http://travis-ci.org/Watermelon-Sauce/htmlValidator)
 
-
 An HTML5 validator written in [node](http://www.nodejs.org).
 
 ## Installation
