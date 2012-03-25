@@ -28,7 +28,7 @@ var options = {
     on: false,
     passfail: false,
     plusplus: false,
-    predef: [],
+    predef: ['it', 'before', 'beforeEach', 'describe'],
     regexp: true,
     rhino: false,
     safe: false,

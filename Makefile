@@ -6,10 +6,13 @@ all:
 test:
 	@node scripts/runtests.js
 
-testf:
-	@node_modules/nodeunit/bin/nodeunit ${file}
+test-file:
+	@node_modules/mocha/bin/mocha --reporter spec ${file}
+
+watch-test:
+	@node_modules/mocha/bin/mocha --reporter min --watch ${file}
 
 lint:
 	@node scripts/runlint.js
 
-.PHONY: all test testf lint
+.PHONY: all test test-file watch-test lint
