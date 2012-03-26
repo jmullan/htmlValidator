@@ -45,10 +45,9 @@ if [[ $lint_errors -gt 0 ]]; then
 fi
 
 echo 'Running Tests...'
-result=$(make test)
-if grep -q FAILURES <<< "$result"; then
-    num=$(grep "FAILURES" <<< "$result")
-    testFail "Test $num"
+result=$(make test 2>&1)
+if grep "tests failed" <<< "$result"; then
+    testFail "Tests Failed"
     echo "$result"
     echo ''
     testsFailed=1
