@@ -1,0 +1,6 @@
+http://developers.whatwg.org/
+https://github.com/benschwarz/developers.whatwg.org
+http://www.whatwg.org/specs/web-apps/current-work/multipage/
+http://static.uxebu.com/~cain/web-testsuite/src/all.html
+https://w3c-test.org/html/tests/
+http://philip.html5.org/tests/canvas/suite/tests/
