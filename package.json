@@ -14,7 +14,8 @@
     },
     "devDependencies": {
         "nodelint": "~0.6",
-        "nodeunit": "~0.7"
+        "should": "~0.6",
+        "mocha": "~1.0"
     },
     "main": "index",
     "engines": {
