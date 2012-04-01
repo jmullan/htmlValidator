@@ -3,16 +3,18 @@ all:
 	@chmod -R +x .git/hooks/
 	@npm install -d
 
+tests := $(shell find . -name '*.test.js' ! -path "*node_modules/*")
+reporter = dot
+# for options, see http://visionmedia.github.com/mocha/#usage
+args =
 test:
-	@node scripts/runtests.js
+	@node_modules/mocha/bin/mocha --reporter ${reporter} ${opts} ${tests}
 
-test-file:
-	@node_modules/mocha/bin/mocha --reporter spec ${file}
+watch-tests:
+	@make test reporter=min opts="--watch ${opts}" tests=${tests}
 
-watch-test:
-	@node_modules/mocha/bin/mocha --reporter min --watch ${file}
-
+files := $(shell find . -name '*.js' ! -path "*node_modules/*")
 lint:
-	@node scripts/runlint.js
+	@node_modules/nodelint/nodelint ${files} --config=scripts/config-lint.js
 
-.PHONY: all test test-file watch-test lint
+.PHONY: all test watch-tests lint
