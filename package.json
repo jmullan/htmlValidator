@@ -13,7 +13,7 @@
         "mime": "1.2.5"
     },
     "devDependencies": {
-        "nodelint": "~0.6",
+        "nodelint": "0.6.1",
         "should": "~0.6",
         "mocha": "~1.0"
     },
